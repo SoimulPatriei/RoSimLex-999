@@ -15,8 +15,8 @@ the human scores and the scores computed from corpora embeddings and the semanti
   - *RoSimlex-Common.txt*  is the common set
 
 ### Compute the correlation coeficients
-1. As said before we have computed all the similarity scores for you and added them in the *RoSimlex-Final.txt* file.
-2.  After running the script the results are in "results_corr.txt" file.
+
+1. After running the next script the results are in "results_corr.txt" file.
   - python correlations.py --scores Data/RoSimLex-Final.txt --results results_corr.txt
 
 ### Reproduce the similarity scores for the Semantic Networks
