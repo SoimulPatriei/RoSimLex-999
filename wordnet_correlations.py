@@ -183,7 +183,7 @@ def main():
 
     print("Get English synsets similarities and compute correlations")
     d_parameters_english = {
-         "rosimlex_file": "Data/RoSimLex-Final.txt",
+         "rosimlex_file": "Data/RoSimLex-Maximal.txt",
          "output_dir": "Results/Wordnet_Similarities",
          "logging_file": "english_wordnet_correlations.log",
           "l_code": "en",
@@ -195,7 +195,7 @@ def main():
 
     print("Get Romanian synsets similarities and compute correlations")
     d_parameters_romanian = {
-         "rosimlex_file": "Data/RoSimLex-Final.txt",
+         "rosimlex_file": "Data/RoSimLex-Maximal.txt",
          "output_dir": "Results/Wordnet_Similarities",
          "logging_file": "romanian_wordnet_correlations.log",
          "l_code": "ro",

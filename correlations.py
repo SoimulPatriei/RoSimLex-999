@@ -2,7 +2,7 @@
 """The script computes the correlations reported in the paper"""
 
 """Run the script:
-python correlations.py --scores Data/RoSimLex-Final.txt --results results_corr.txt
+python correlations.py --scores Data/RoSimLex-Maximal.txt --results results_corr.txt
 """
 
 __author__ = "Eduard Barbu"
