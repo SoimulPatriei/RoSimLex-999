@@ -119,13 +119,13 @@ def wordnet_correlations(d_parameters):
     verb_list = get_pos_list(d_parameters["rosimlex_file"], d_parameters["indexes"], "V")
 
     path_labels = get_list("path_similarity")
-    fo_path = get_handle(d_parameters["output_dir"], "path", d_parameters["l_code"])
+    fo_path = get_handle(d_parameters["output_dir"], "PS", d_parameters["l_code"])
 
     lch_labels = get_list("lch_similarity")
-    fo_lch = get_handle(d_parameters["output_dir"], "lch", d_parameters["l_code"])
+    fo_lch = get_handle(d_parameters["output_dir"], "LC", d_parameters["l_code"])
 
     wup_labels = get_list("wup_similarity")
-    fo_wup = get_handle(d_parameters["output_dir"], "wup", d_parameters["l_code"])
+    fo_wup = get_handle(d_parameters["output_dir"], "WuP", d_parameters["l_code"])
 
     path_list = []
     lch_list = []

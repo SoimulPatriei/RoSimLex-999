@@ -95,19 +95,19 @@ def get_model(my_corpus, f_embeddings):
     f_output = ""
     if my_corpus == "Corola.300.20" :
         current_model = KeyedVectors.load_word2vec_format(f_embeddings, binary=False)
-        f_output = "Corola.300.20-cosine_similarity.txt"
+        f_output = "Results/Corpus_Similarities/CoRoLa_300_20-cosine_similarity.txt"
 
     elif my_corpus == "Corola.400.5":
         current_model = KeyedVectors.load_word2vec_format(f_embeddings, binary=False)
-        f_output = "Corola.400.5-cosine_similarity.txt"
+        f_output = "Results/Corpus_Similarities/CoRoLa_400_5-cosine_similarity.txt"
 
     elif my_corpus == "Facebook":
         current_model = FastText.load_fasttext_format(f_embeddings)
-        f_output = "Facebook-cosine_similarity.txt"
+        f_output = "Results/Corpus_Similarities/fastText-cosine_similarity.txt"
 
     elif my_corpus == "CONLL2017-Word2vec":
         current_model = KeyedVectors.load_word2vec_format(f_embeddings, binary=True)
-        f_output = "CONLL22017-Word2Vec-cosine_similarity.txt"
+        f_output = "Results/Corpus_Similarities/CoNLL-2017-cosine_similarity.txt"
     return f_output
 
 
@@ -128,12 +128,11 @@ def compute_cosine_similarity(f_translations, f_embeddings, my_corpus):
     for line in fi:
 
         line = line.rstrip()
-        line = replace_particule(line, "se")
         components = line.split("\t")
 
-        word1 = components[0]
-        word2 = components[1]
-        if components[5] != "1":
+        word1 = components[3]
+        word2 = components[4]
+        if components[5] == "1":
             exists1 = check_exists(word1, my_corpus)
             exists2 = check_exists(word2, my_corpus)
             similarity = "null"
@@ -152,7 +151,7 @@ def main():
     init_logger(logging_file)
     logger = logging.getLogger("main")
 
-    f_translations = "Data/RoSimLex-Final.txt"
+    f_translations = "Data/RoSimLex-Maximal.txt"
     f_embeddings = "Embeddings/CONLL2017_Word2vec/model.bin"
     compute_cosine_similarity(f_translations, f_embeddings, "CONLL2017-Word2vec")
     logger.info("Cosine Similarity computed for CONLL 2017 Word2vec Training Embeddings\n")
