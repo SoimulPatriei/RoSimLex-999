@@ -2,7 +2,8 @@
 The aproach is described in the following paper:
 
 Barbu, Eduard; Barbu Mititelu, Verginica (2022). Evaluating Computational Models of Similarity against a Human Rated Dataset. Baltic Journal of Modern Computing, 10 (3), 295−306. DOI: 10.22364/bjmc.2022.10.3.03. [Download](https://doi.org/10.22364/bjmc.2022.10.3.03)\
-For convenience the paper is also uploaded under the Paper folder in this Github distribution
+For convenience the paper is also uploaded under "Evaluating Computational Models of Similarity
+against a Human Rated Dataset.pdf" in this Github distribution
 
 
 ## The RoSimLex-999 data and code
